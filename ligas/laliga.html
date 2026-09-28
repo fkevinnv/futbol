@@ -2,92 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Liga - Tienda de Camisetas</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- EXACTAMENTE EL MISMO CSS QUE EL INDEX -->
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-  <header> La Liga </header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/index.html">Streetwear Store</a>
 
-  <nav>
-    <a href="index.html">🏠 Inicio</a>
-  </nav>
-
-  <!-- OJO: ahora usamos camisetas-container y camiseta -->
-  <section class="camisetas-container">
-    <div class="camiseta">
-      <img src="/ligas/escudos/barca_escudo.png" alt="FC Barcelona">
-      <p>FC Barcelona</p>
+      <nav aria-label="Ligas">
+        <ul>
+          <li><a href="/ligas/laliga.html" aria-current="page">La Liga</a></li>
+          <li><a href="/ligas/premier.html">Premier League</a></li>
+          <li><a href="/ligas/seriea.html">Serie A</a></li>
+          <li><a href="/ligas/bundesliga.html">Bundesliga</a></li>
+          <li><a href="/ligas/ligue1.html">Ligue 1</a></li>
+          <li><a href="https://www.instagram.com/streetwear.store01/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="camiseta">
-      <img src=/camisetas/laliga/realmadrid/madrid.png" alt="Real Madrid">
-      <p>Real Madrid</p>
-    </div>
+  <main>
+    <section class="intro">
+      <a class="volver" href="/index.html">Volver al catálogo</a>
+      <h1>La Liga</h1>
+      <p>Elige un equipo para ver sus camisetas.</p>
+    </section>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/atletico/atleti.png" alt="Atlético de Madrid">
-      <p>Atlético de Madrid</p>
-    </div>
+    <section class="camisetas-container">
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/ligas/escudos/barca_escudo.png" alt="FC Barcelona" loading="lazy">
+        </div>
+        <p>FC Barcelona</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/sevilla/sevilla.png" alt="Sevilla FC">
-      <p>Sevilla FC</p>
-    </div>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/realmadrid/madrid.png" alt="Real Madrid" loading="lazy">
+        </div>
+        <p>Real Madrid</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/realbetis/betis.png" alt="Real Betis">
-      <p>Real Betis</p>
-    </div>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/atletico/atleti.png" alt="Atlético de Madrid" loading="lazy">
+        </div>
+        <p>Atlético de Madrid</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/valencia/valencia.png" alt="Valencia CF">
-      <p>Valencia CF</p>
-    </div>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/sevilla/sevilla.png" alt="Sevilla FC" loading="lazy">
+        </div>
+        <p>Sevilla FC</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/villarreal/villarreal.png" alt="Villarreal CF">
-      <p>Villarreal CF</p>
-    </div>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/realbetis/betis.png" alt="Real Betis" loading="lazy">
+        </div>
+        <p>Real Betis</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/ath/ath.png" alt="Athletic Club Bilbao">
-      <p>Athletic Club Bilbao</p>
-    </div>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/valencia/valencia.png" alt="Valencia CF" loading="lazy">
+        </div>
+        <p>Valencia CF</p>
+      </article>
 
-    <div class="camiseta">
-      <img src="/camisetas/laliga/rso/rso.png" alt="Real Sociedad">
-      <p>Real Sociedad</p>
-    </div>
-      <div class="camiseta">
-      <img src="/camisetas/laliga/sevilla/sev.png" alt="Sevilla">
-      <p>Sevilla F.C</p>
-    </div>
-  </section>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/villarreal/villarreal.png" alt="Villarreal CF" loading="lazy">
+        </div>
+        <p>Villarreal CF</p>
+      </article>
 
-  <button id="volverInicio" onclick="volverAlInicio()">Volver al inicio</button>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/ath/ath.png" alt="Athletic Club Bilbao" loading="lazy">
+        </div>
+        <p>Athletic Club Bilbao</p>
+      </article>
 
-  <footer>© 2025 La Liga - streetwearstore </footer>
+      <article class="camiseta">
+        <div class="camiseta-img">
+          <img src="/camisetas/laliga/rso/rso.png" alt="Real Sociedad" loading="lazy">
+        </div>
+        <p>Real Sociedad</p>
+      </article>
+    </section>
+
+    <button id="volverInicio" class="btn-subir" type="button">Volver arriba</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 La Liga - Streetwear Store</p>
+  </footer>
 
   <script>
-    const imagenes = document.querySelectorAll(".camiseta img");
-
-    imagenes.forEach(img => {
-      img.addEventListener("click", () => {
-        alert("Has seleccionado la camiseta de " + img.alt);
-      });
+    document.getElementById('volverInicio').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    function volverAlInicio() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
   </script>
 </body>
 </html>
