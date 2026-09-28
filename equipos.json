@@ -3,44 +3,412 @@
     "nombre": "La Liga",
     "temporada": "2026/27",
     "equipos": [
-      {"nombre": "FC Barcelona", "imagen": "camisetas/laliga/barcelona/barca.png"},
-      {"nombre": "Real Madrid", "imagen": "camisetas/laliga/madrid/rma2324.png"},
-      {"nombre": "Atlético de Madrid", "imagen": "camisetas/laliga/atletico/atleti.png"},
-      {"nombre": "Sevilla FC", "imagen": "camisetas/laliga/sevilla/sevilla.png"},
-      {"nombre": "Real Betis", "imagen": "camisetas/laliga/realbetis/betis.png"},
-      {"nombre": "Valencia CF", "imagen": "camisetas/laliga/valencia/valencia.png"},
-      {"nombre": "Villarreal CF", "imagen": "camisetas/laliga/villarreal/villarreal.png"},
-      {"nombre": "Athletic Club Bilbao", "imagen": "camisetas/laliga/ath/ath.png"},
-      {"nombre": "Real Sociedad", "imagen": "camisetas/laliga/rso/rso.png"},
-      {"nombre": "Real Racing Club", "imagen": "camisetas/laliga/racing/racing.png"},
-      {"nombre": "RC Deportivo de La Coruña", "imagen": "camisetas/laliga/deportivo/deportivo.png"},
-      {"nombre": "Málaga CF", "imagen": "camisetas/laliga/malaga/malaga.png"}
+      {
+        "id": "alaves",
+        "nombre": "Deportivo Alavés",
+        "escudo": "escudos/laliga/alaves.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/alaves/alaves_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/alaves/alaves_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/alaves/alaves_tercera.png"}
+        ]
+      },
+      {
+        "id": "ath",
+        "nombre": "Athletic Club",
+        "escudo": "escudos/laliga/ath.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_tercera.png"}
+        ]
+      },
+      {
+        "id": "atletico",
+        "nombre": "Atlético de Madrid",
+        "escudo": "escudos/laliga/atletico.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/atletico/atletico_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/atletico/atletico_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/atletico/atletico_tercera.png"}
+        ]
+      },
+      {
+        "id": "barcelona",
+        "nombre": "FC Barcelona",
+        "escudo": "escudos/laliga/barcelona.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2025/26", "imagen": "camisetas/laliga/barcelona/barca.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/barcelona/barcelona_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/barcelona/barcelona_tercera.png"}
+        ]
+      },
+      {
+        "id": "realbetis",
+        "nombre": "Real Betis",
+        "escudo": "escudos/laliga/realbetis.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/realbetis/realbetis_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/realbetis/realbetis_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/realbetis/realbetis_tercera.png"}
+        ]
+      },
+      {
+        "id": "celta",
+        "nombre": "RC Celta",
+        "escudo": "escudos/laliga/celta.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/celta/celta_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/celta/celta_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/celta/celta_tercera.png"}
+        ]
+      },
+      {
+        "id": "deportivo",
+        "nombre": "RC Deportivo de La Coruña",
+        "escudo": "escudos/laliga/deportivo.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/deportivo/deportivo_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/deportivo/deportivo_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/deportivo/deportivo_tercera.png"}
+        ]
+      },
+      {
+        "id": "elche",
+        "nombre": "Elche CF",
+        "escudo": "escudos/laliga/elche.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/elche/elche_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/elche/elche_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/elche/elche_tercera.png"}
+        ]
+      },
+      {
+        "id": "espanyol",
+        "nombre": "RCD Espanyol",
+        "escudo": "escudos/laliga/espanyol.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/espanyol/espanyol_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/espanyol/espanyol_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/espanyol/espanyol_tercera.png"}
+        ]
+      },
+      {
+        "id": "getafe",
+        "nombre": "Getafe CF",
+        "escudo": "escudos/laliga/getafe.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/getafe/getafe_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/getafe/getafe_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/getafe/getafe_tercera.png"}
+        ]
+      },
+      {
+        "id": "levante",
+        "nombre": "Levante UD",
+        "escudo": "escudos/laliga/levante.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/levante/levante_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/levante/levante_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/levante/levante_tercera.png"}
+        ]
+      },
+      {
+        "id": "malaga",
+        "nombre": "Málaga CF",
+        "escudo": "escudos/laliga/malaga.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/malaga/malaga_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/malaga/malaga_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/malaga/malaga_tercera.png"}
+        ]
+      },
+      {
+        "id": "osasuna",
+        "nombre": "CA Osasuna",
+        "escudo": "escudos/laliga/osasuna.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/osasuna/osasuna_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/osasuna/osasuna_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/osasuna/osasuna_tercera.png"}
+        ]
+      },
+      {
+        "id": "racing",
+        "nombre": "Real Racing Club",
+        "escudo": "escudos/laliga/racing.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/racing/racing_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/racing/racing_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/racing/racing_tercera.png"}
+        ]
+      },
+      {
+        "id": "rayo",
+        "nombre": "Rayo Vallecano",
+        "escudo": "escudos/laliga/rayo.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/rayo/rayo_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/rayo/rayo_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/rayo/rayo_tercera.png"}
+        ]
+      },
+      {
+        "id": "madrid",
+        "nombre": "Real Madrid",
+        "escudo": "escudos/laliga/madrid.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2023/24", "imagen": "camisetas/laliga/madrid/rma2324.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/madrid/madrid_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/madrid/madrid_tercera.png"}
+        ]
+      },
+      {
+        "id": "rso",
+        "nombre": "Real Sociedad",
+        "escudo": "escudos/laliga/rso.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/rso/rso_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/rso/rso_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/rso/rso_tercera.png"}
+        ]
+      },
+      {
+        "id": "sevilla",
+        "nombre": "Sevilla FC",
+        "escudo": "escudos/laliga/sevilla.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/sevilla/sevilla_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/sevilla/sevilla_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/sevilla/sevilla_tercera.png"}
+        ]
+      },
+      {
+        "id": "valencia",
+        "nombre": "Valencia CF",
+        "escudo": "escudos/laliga/valencia.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/valencia/valencia_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/valencia/valencia_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/valencia/valencia_tercera.png"}
+        ]
+      },
+      {
+        "id": "villarreal",
+        "nombre": "Villarreal CF",
+        "escudo": "escudos/laliga/villarreal.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/villarreal/villarreal_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/villarreal/villarreal_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/laliga/villarreal/villarreal_tercera.png"}
+        ]
+      }
     ]
   },
   "premier": {
     "nombre": "Premier League",
     "temporada": "2026/27",
     "equipos": [
-      {"nombre": "Arsenal", "imagen": "camisetas/premier/arsenal/arsenal.png"},
-      {"nombre": "Aston Villa", "imagen": "camisetas/premier/astonvilla/astonvilla.png"},
-      {"nombre": "Bournemouth", "imagen": "camisetas/premier/bournemouth/bournemouth.png"},
-      {"nombre": "Brentford", "imagen": "camisetas/premier/brentford/brentford.png"},
-      {"nombre": "Brighton & Hove Albion", "imagen": "camisetas/premier/brighton/brighton.png"},
-      {"nombre": "Chelsea", "imagen": "camisetas/premier/chelsea/chelsea.png"},
-      {"nombre": "Coventry City", "imagen": "camisetas/premier/coventry/coventry.png"},
-      {"nombre": "Crystal Palace", "imagen": "camisetas/premier/crystalpalace/crystalpalace.png"},
-      {"nombre": "Everton", "imagen": "camisetas/premier/everton/everton.png"},
-      {"nombre": "Fulham", "imagen": "camisetas/premier/fulham/fulham.png"},
-      {"nombre": "Hull City", "imagen": "camisetas/premier/hull/hull.png"},
-      {"nombre": "Ipswich Town", "imagen": "camisetas/premier/ipswich/ipswich.png"},
-      {"nombre": "Leeds United", "imagen": "camisetas/premier/leeds/leeds.png"},
-      {"nombre": "Liverpool", "imagen": "camisetas/premier/liverpool/liverpool.png"},
-      {"nombre": "Manchester City", "imagen": "camisetas/premier/city/mancity_2024_3.png"},
-      {"nombre": "Manchester United", "imagen": "camisetas/premier/manutd/manutd.png"},
-      {"nombre": "Newcastle United", "imagen": "camisetas/premier/newcastle/newcastle.png"},
-      {"nombre": "Nottingham Forest", "imagen": "camisetas/premier/forest/forest.png"},
-      {"nombre": "Sunderland", "imagen": "camisetas/premier/sunderland/sunderland.png"},
-      {"nombre": "Tottenham Hotspur", "imagen": "camisetas/premier/tottenham/tottenham.png"}
+      {
+        "id": "arsenal",
+        "nombre": "Arsenal",
+        "escudo": "escudos/premier/arsenal.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/arsenal/arsenal_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/arsenal/arsenal_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/arsenal/arsenal_tercera.png"}
+        ]
+      },
+      {
+        "id": "astonvilla",
+        "nombre": "Aston Villa",
+        "escudo": "escudos/premier/astonvilla.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/astonvilla/astonvilla_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/astonvilla/astonvilla_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/astonvilla/astonvilla_tercera.png"}
+        ]
+      },
+      {
+        "id": "bournemouth",
+        "nombre": "Bournemouth",
+        "escudo": "escudos/premier/bournemouth.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/bournemouth/bournemouth_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/bournemouth/bournemouth_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/bournemouth/bournemouth_tercera.png"}
+        ]
+      },
+      {
+        "id": "brentford",
+        "nombre": "Brentford",
+        "escudo": "escudos/premier/brentford.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/brentford/brentford_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/brentford/brentford_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/brentford/brentford_tercera.png"}
+        ]
+      },
+      {
+        "id": "brighton",
+        "nombre": "Brighton & Hove Albion",
+        "escudo": "escudos/premier/brighton.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/brighton/brighton_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/brighton/brighton_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/brighton/brighton_tercera.png"}
+        ]
+      },
+      {
+        "id": "chelsea",
+        "nombre": "Chelsea",
+        "escudo": "escudos/premier/chelsea.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/chelsea/chelsea_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/chelsea/chelsea_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/chelsea/chelsea_tercera.png"}
+        ]
+      },
+      {
+        "id": "coventry",
+        "nombre": "Coventry City",
+        "escudo": "escudos/premier/coventry.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/coventry/coventry_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/coventry/coventry_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/coventry/coventry_tercera.png"}
+        ]
+      },
+      {
+        "id": "crystalpalace",
+        "nombre": "Crystal Palace",
+        "escudo": "escudos/premier/crystalpalace.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/crystalpalace/crystalpalace_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/crystalpalace/crystalpalace_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/crystalpalace/crystalpalace_tercera.png"}
+        ]
+      },
+      {
+        "id": "everton",
+        "nombre": "Everton",
+        "escudo": "escudos/premier/everton.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/everton/everton_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/everton/everton_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/everton/everton_tercera.png"}
+        ]
+      },
+      {
+        "id": "fulham",
+        "nombre": "Fulham",
+        "escudo": "escudos/premier/fulham.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/fulham/fulham_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/fulham/fulham_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/fulham/fulham_tercera.png"}
+        ]
+      },
+      {
+        "id": "hull",
+        "nombre": "Hull City",
+        "escudo": "escudos/premier/hull.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/hull/hull_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/hull/hull_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/hull/hull_tercera.png"}
+        ]
+      },
+      {
+        "id": "ipswich",
+        "nombre": "Ipswich Town",
+        "escudo": "escudos/premier/ipswich.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/ipswich/ipswich_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/ipswich/ipswich_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/ipswich/ipswich_tercera.png"}
+        ]
+      },
+      {
+        "id": "leeds",
+        "nombre": "Leeds United",
+        "escudo": "escudos/premier/leeds.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/leeds/leeds_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/leeds/leeds_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/leeds/leeds_tercera.png"}
+        ]
+      },
+      {
+        "id": "liverpool",
+        "nombre": "Liverpool",
+        "escudo": "escudos/premier/liverpool.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/liverpool/liverpool_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/liverpool/liverpool_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/liverpool/liverpool_tercera.png"}
+        ]
+      },
+      {
+        "id": "city",
+        "nombre": "Manchester City",
+        "escudo": "escudos/premier/city.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/city/city_local.png"},
+          {"tipo": "Visitante", "temporada": "2023/24", "imagen": "camisetas/premier/city/mancity_2024_3.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/city/city_tercera.png"}
+        ]
+      },
+      {
+        "id": "manutd",
+        "nombre": "Manchester United",
+        "escudo": "escudos/premier/manutd.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/manutd/manutd_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/manutd/manutd_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/manutd/manutd_tercera.png"}
+        ]
+      },
+      {
+        "id": "newcastle",
+        "nombre": "Newcastle United",
+        "escudo": "escudos/premier/newcastle.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/newcastle/newcastle_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/newcastle/newcastle_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/newcastle/newcastle_tercera.png"}
+        ]
+      },
+      {
+        "id": "forest",
+        "nombre": "Nottingham Forest",
+        "escudo": "escudos/premier/forest.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/forest/forest_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/forest/forest_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/forest/forest_tercera.png"}
+        ]
+      },
+      {
+        "id": "sunderland",
+        "nombre": "Sunderland",
+        "escudo": "escudos/premier/sunderland.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/sunderland/sunderland_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/sunderland/sunderland_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/sunderland/sunderland_tercera.png"}
+        ]
+      },
+      {
+        "id": "tottenham",
+        "nombre": "Tottenham Hotspur",
+        "escudo": "escudos/premier/tottenham.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/premier/tottenham/tottenham_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/premier/tottenham/tottenham_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/premier/tottenham/tottenham_tercera.png"}
+        ]
+      }
     ]
   },
   "seriea": {
@@ -57,7 +425,16 @@
     "nombre": "Ligue 1",
     "temporada": "2026/27",
     "equipos": [
-      {"nombre": "Paris Saint-Germain", "imagen": "camisetas/ligue1/psg/psg_visitante.png"}
+      {
+        "id": "psg",
+        "nombre": "Paris Saint-Germain",
+        "escudo": "escudos/ligue1/psg.png",
+        "equipaciones": [
+          {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/ligue1/psg/psg_local.png"},
+          {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/ligue1/psg/psg_visitante.png"},
+          {"tipo": "Tercera", "temporada": "2026/27", "imagen": "camisetas/ligue1/psg/psg_tercera.png"}
+        ]
+      }
     ]
   }
 }
