@@ -3,47 +3,61 @@
     "nombre": "La Liga",
     "temporada": "2026/27",
     "equipos": [
-      { "nombre": "FC Barcelona", "imagen": "camisetas/laliga/barcelona/barca.png" },
-      { "nombre": "Real Madrid", "imagen": "camisetas/laliga/realmadrid/madrid.png" },
-      { "nombre": "Atlético de Madrid", "imagen": "camisetas/laliga/atletico/atleti.png" },
-      { "nombre": "Sevilla FC", "imagen": "camisetas/laliga/sevilla/sevilla.png" },
-      { "nombre": "Real Betis", "imagen": "camisetas/laliga/realbetis/betis.png" },
-      { "nombre": "Valencia CF", "imagen": "camisetas/laliga/valencia/valencia.png" },
-      { "nombre": "Villarreal CF", "imagen": "camisetas/laliga/villarreal/villarreal.png" },
-      { "nombre": "Athletic Club Bilbao", "imagen": "camisetas/laliga/ath/ath.png" },
-      { "nombre": "Real Sociedad", "imagen": "camisetas/laliga/rso/rso.png" },
-      { "nombre": "Real Racing Club", "imagen": "camisetas/laliga/racing/racing.png" },
-      { "nombre": "RC Deportivo de La Coruña", "imagen": "camisetas/laliga/deportivo/deportivo.png" },
-      { "nombre": "Málaga CF", "imagen": "camisetas/laliga/malaga/malaga.png" }
+      {"nombre": "FC Barcelona", "imagen": "camisetas/laliga/barcelona/barca.png"},
+      {"nombre": "Real Madrid", "imagen": "camisetas/laliga/madrid/rma2324.png"},
+      {"nombre": "Atlético de Madrid", "imagen": "camisetas/laliga/atletico/atleti.png"},
+      {"nombre": "Sevilla FC", "imagen": "camisetas/laliga/sevilla/sevilla.png"},
+      {"nombre": "Real Betis", "imagen": "camisetas/laliga/realbetis/betis.png"},
+      {"nombre": "Valencia CF", "imagen": "camisetas/laliga/valencia/valencia.png"},
+      {"nombre": "Villarreal CF", "imagen": "camisetas/laliga/villarreal/villarreal.png"},
+      {"nombre": "Athletic Club Bilbao", "imagen": "camisetas/laliga/ath/ath.png"},
+      {"nombre": "Real Sociedad", "imagen": "camisetas/laliga/rso/rso.png"},
+      {"nombre": "Real Racing Club", "imagen": "camisetas/laliga/racing/racing.png"},
+      {"nombre": "RC Deportivo de La Coruña", "imagen": "camisetas/laliga/deportivo/deportivo.png"},
+      {"nombre": "Málaga CF", "imagen": "camisetas/laliga/malaga/malaga.png"}
     ]
   },
   "premier": {
     "nombre": "Premier League",
     "temporada": "2026/27",
     "equipos": [
-      { "nombre": "Arsenal", "imagen": "camisetas/premier/arsenal/arsenal.png" },
-      { "nombre": "Aston Villa", "imagen": "camisetas/premier/astonvilla/astonvilla.png" },
-      { "nombre": "Bournemouth", "imagen": "camisetas/premier/bournemouth/bournemouth.png" },
-      { "nombre": "Brentford", "imagen": "camisetas/premier/brentford/brentford.png" },
-      { "nombre": "Brighton & Hove Albion", "imagen": "camisetas/premier/brighton/brighton.png" },
-      { "nombre": "Chelsea", "imagen": "camisetas/premier/chelsea/chelsea.png" },
-      { "nombre": "Coventry City", "imagen": "camisetas/premier/coventry/coventry.png" },
-      { "nombre": "Crystal Palace", "imagen": "camisetas/premier/crystalpalace/crystalpalace.png" },
-      { "nombre": "Everton", "imagen": "camisetas/premier/everton/everton.png" },
-      { "nombre": "Fulham", "imagen": "camisetas/premier/fulham/fulham.png" },
-      { "nombre": "Hull City", "imagen": "camisetas/premier/hull/hull.png" },
-      { "nombre": "Ipswich Town", "imagen": "camisetas/premier/ipswich/ipswich.png" },
-      { "nombre": "Leeds United", "imagen": "camisetas/premier/leeds/leeds.png" },
-      { "nombre": "Liverpool", "imagen": "camisetas/premier/liverpool/liverpool.png" },
-      { "nombre": "Manchester City", "imagen": "camisetas/premier/city/mancity_2024_3.png" },
-      { "nombre": "Manchester United", "imagen": "camisetas/premier/manutd/manutd.png" },
-      { "nombre": "Newcastle United", "imagen": "camisetas/premier/newcastle/newcastle.png" },
-      { "nombre": "Nottingham Forest", "imagen": "camisetas/premier/forest/forest.png" },
-      { "nombre": "Sunderland", "imagen": "camisetas/premier/sunderland/sunderland.png" },
-      { "nombre": "Tottenham Hotspur", "imagen": "camisetas/premier/tottenham/tottenham.png" }
+      {"nombre": "Arsenal", "imagen": "camisetas/premier/arsenal/arsenal.png"},
+      {"nombre": "Aston Villa", "imagen": "camisetas/premier/astonvilla/astonvilla.png"},
+      {"nombre": "Bournemouth", "imagen": "camisetas/premier/bournemouth/bournemouth.png"},
+      {"nombre": "Brentford", "imagen": "camisetas/premier/brentford/brentford.png"},
+      {"nombre": "Brighton & Hove Albion", "imagen": "camisetas/premier/brighton/brighton.png"},
+      {"nombre": "Chelsea", "imagen": "camisetas/premier/chelsea/chelsea.png"},
+      {"nombre": "Coventry City", "imagen": "camisetas/premier/coventry/coventry.png"},
+      {"nombre": "Crystal Palace", "imagen": "camisetas/premier/crystalpalace/crystalpalace.png"},
+      {"nombre": "Everton", "imagen": "camisetas/premier/everton/everton.png"},
+      {"nombre": "Fulham", "imagen": "camisetas/premier/fulham/fulham.png"},
+      {"nombre": "Hull City", "imagen": "camisetas/premier/hull/hull.png"},
+      {"nombre": "Ipswich Town", "imagen": "camisetas/premier/ipswich/ipswich.png"},
+      {"nombre": "Leeds United", "imagen": "camisetas/premier/leeds/leeds.png"},
+      {"nombre": "Liverpool", "imagen": "camisetas/premier/liverpool/liverpool.png"},
+      {"nombre": "Manchester City", "imagen": "camisetas/premier/city/mancity_2024_3.png"},
+      {"nombre": "Manchester United", "imagen": "camisetas/premier/manutd/manutd.png"},
+      {"nombre": "Newcastle United", "imagen": "camisetas/premier/newcastle/newcastle.png"},
+      {"nombre": "Nottingham Forest", "imagen": "camisetas/premier/forest/forest.png"},
+      {"nombre": "Sunderland", "imagen": "camisetas/premier/sunderland/sunderland.png"},
+      {"nombre": "Tottenham Hotspur", "imagen": "camisetas/premier/tottenham/tottenham.png"}
     ]
   },
-  "seriea": { "nombre": "Serie A", "temporada": "2026/27", "equipos": [] },
-  "bundesliga": { "nombre": "Bundesliga", "temporada": "2026/27", "equipos": [] },
-  "ligue1": { "nombre": "Ligue 1", "temporada": "2026/27", "equipos": [] }
+  "seriea": {
+    "nombre": "Serie A",
+    "temporada": "2026/27",
+    "equipos": []
+  },
+  "bundesliga": {
+    "nombre": "Bundesliga",
+    "temporada": "2026/27",
+    "equipos": []
+  },
+  "ligue1": {
+    "nombre": "Ligue 1",
+    "temporada": "2026/27",
+    "equipos": [
+      {"nombre": "Paris Saint-Germain", "imagen": "camisetas/ligue1/psg/psg_visitante.png"}
+    ]
+  }
 }
