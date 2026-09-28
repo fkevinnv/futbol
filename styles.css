@@ -175,6 +175,7 @@ h1 {
 
 /* Listado de camisetas */
 #ligas h2,
+#resultados h2,
 #topCamisetas h2 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -360,4 +361,90 @@ nav a[aria-current="page"] {
   color: var(--texto-suave);
   font-size: 0.9rem;
   text-align: center;
+}
+
+/* Atributo hidden siempre efectivo */
+[hidden] {
+  display: none !important;
+}
+
+/* Información de cada tarjeta */
+.camiseta-info {
+  padding: 0.9rem 1rem 0.5rem;
+}
+
+.camiseta-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.camiseta-dato {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.camiseta-precio {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--acento);
+  font-family: var(--fuente-titulo);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Botón de consulta */
+.btn-consulta {
+  display: block;
+  width: calc(100% - 2rem);
+  margin: 0.5rem 1rem 1rem;
+  padding: 0.55rem 0.75rem;
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-consulta:hover {
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+/* Aviso temporal */
+#aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2rem);
+  padding: 0.7rem 1.1rem;
+  background: var(--superficie-2);
+  border: 1px solid var(--acento);
+  border-radius: var(--radio);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+#aviso.visible {
+  opacity: 1;
+}
+
+/* Tarjetas de equipo (escudo) */
+.enlace-equipo {
+  display: block;
+}
+
+.enlace-equipo .camiseta-img img {
+  max-width: 65%;
+  max-height: 65%;
+}
+
+.enlace-equipo .camiseta-info {
+  padding-bottom: 0.9rem;
 }
