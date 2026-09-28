@@ -132,6 +132,21 @@
       sinResultados.hidden = visibles > 0;
     }
 
+    function sinFoto(img) {
+      const aviso = document.createElement('div');
+      aviso.className = 'sin-foto';
+      aviso.textContent = 'Foto próximamente';
+      img.replaceWith(aviso);
+    }
+
+    document.querySelectorAll('.camiseta img').forEach(function (img) {
+      if (img.complete && img.naturalWidth === 0) {
+        sinFoto(img);
+      } else {
+        img.addEventListener('error', function () { sinFoto(img); }, { once: true });
+      }
+    });
+
     searchBox.addEventListener('input', buscarCamisetas);
     document.getElementById('busqueda').addEventListener('submit', function (e) {
       e.preventDefault();
