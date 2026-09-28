@@ -51,6 +51,7 @@
     <p>&copy; 2025 Catálogo camisetas de fútbol - Streetwear Store</p>
   </footer>
 
+  <script src="catalogo.js"></script>
   <script>
     const listado = document.getElementById('listado');
     const mensaje = document.getElementById('mensaje');
@@ -62,40 +63,12 @@
       mensaje.hidden = false;
     }
 
-    function sinFoto(img) {
-      const aviso = document.createElement('div');
-      aviso.className = 'sin-foto';
-      aviso.textContent = 'Foto próximamente';
-      img.replaceWith(aviso);
-    }
-
-    function crearTarjeta(equipo) {
-      const article = document.createElement('article');
-      article.className = 'camiseta';
-
-      const contenedor = document.createElement('div');
-      contenedor.className = 'camiseta-img';
-
-      const img = document.createElement('img');
-      img.addEventListener('error', function () { sinFoto(img); }, { once: true });
-      img.src = equipo.imagen;
-      img.alt = 'Camiseta ' + equipo.nombre;
-      img.loading = 'lazy';
-      contenedor.appendChild(img);
-
-      const nombre = document.createElement('p');
-      nombre.textContent = equipo.nombre;
-
-      article.append(contenedor, nombre);
-      return article;
-    }
-
     function filtrar() {
-      const filtro = searchBox.value.trim().toLowerCase();
+      const filtro = normalizar(searchBox.value.trim());
       let visibles = 0;
 
       listado.querySelectorAll('.camiseta').forEach(function (c) {
-        const coincide = c.querySelector('p').textContent.toLowerCase().includes(filtro);
+        const coincide = normalizar(c.querySelector('p').textContent).includes(filtro);
         c.hidden = !coincide;
         if (coincide) visibles++;
       });
@@ -111,9 +84,7 @@
       const id = new URLSearchParams(window.location.search).get('liga') || 'laliga';
 
       try {
-        const respuesta = await fetch('equipos.json');
-        if (!respuesta.ok) throw new Error('HTTP ' + respuesta.status);
-        const datos = await respuesta.json();
+        const datos = await cargarEquipos();
         const liga = datos[id];
 
         if (!liga) {
@@ -137,9 +108,9 @@
         }
 
         document.getElementById('subtituloLiga').textContent =
-          'Temporada ' + liga.temporada + '. Elige un equipo para ver sus camisetas.';
+          'Temporada ' + liga.temporada + '. Elige un equipo para ver sus equipaciones.';
         liga.equipos.forEach(function (equipo) {
-          listado.appendChild(crearTarjeta(equipo));
+          listado.appendChild(crearTarjetaEquipo(id, equipo));
         });
         formBusqueda.hidden = false;
       } catch (error) {
