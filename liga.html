@@ -100,7 +100,7 @@
     }
 
     async function cargarLiga() {
-        const id = new URLSearchParams(window.location.search).get('liga') || 'laliga';
+      const id = new URLSearchParams(window.location.search).get('liga') || 'laliga';
 
       try {
         const respuesta = await fetch('data/equipos.json');
