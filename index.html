@@ -34,11 +34,11 @@
   <main>
     <section class="intro">
       <h1>Catálogo de Camisetas de Fútbol</h1>
-      <p>Camisetas de las principales ligas europeas. Busca por equipo, temporada o jugador.</p>
+      <p>Camisetas de las principales ligas europeas. Busca por equipo o por liga.</p>
 
       <form id="busqueda" role="search">
         <label for="searchBox" class="visually-hidden">Buscar camisetas</label>
-        <input type="search" id="searchBox" placeholder="Buscar camisetas..." autocomplete="off">
+        <input type="search" id="searchBox" placeholder="Buscar equipo o liga..." autocomplete="off">
         <button type="submit">Buscar</button>
       </form>
     </section>
@@ -103,9 +103,12 @@
         </article>
       </div>
 
-      <p id="sinResultados" class="sin-resultados" hidden>
-        No hay camisetas que coincidan con tu búsqueda. Prueba con el nombre de otro equipo.
-      </p>
+    </section>
+
+    <section id="resultados" hidden>
+      <h2>Resultados</h2>
+      <div id="listaResultados" class="camisetas-container"></div>
+      <p id="sinResultados" class="sin-resultados" hidden></p>
     </section>
   </main>
 
@@ -113,45 +116,70 @@
     <p>&copy; 2025 Catálogo camisetas de fútbol - Streetwear Store</p>
   </footer>
 
+  <script src="catalogo.js"></script>
   <script>
     const searchBox = document.getElementById('searchBox');
-    const camisetas = document.querySelectorAll('.camiseta');
+    const inicio = [document.getElementById('ligas'), document.getElementById('topCamisetas')];
+    const resultados = document.getElementById('resultados');
+    const listaResultados = document.getElementById('listaResultados');
     const sinResultados = document.getElementById('sinResultados');
+    let datos = null;
 
-    function buscarCamisetas() {
-      const filtro = searchBox.value.trim().toLowerCase();
-      let visibles = 0;
-
-      camisetas.forEach(function (c) {
-        const nombre = c.querySelector('p').textContent.toLowerCase();
-        const coincide = nombre.includes(filtro);
-        c.hidden = !coincide;
-        if (coincide) visibles++;
-      });
-
-      sinResultados.hidden = visibles > 0;
-    }
-
-    function sinFoto(img) {
-      const aviso = document.createElement('div');
-      aviso.className = 'sin-foto';
-      aviso.textContent = 'Foto próximamente';
-      img.replaceWith(aviso);
-    }
-
-    document.querySelectorAll('.camiseta img').forEach(function (img) {
+    // Fotos de respaldo y botón en las tarjetas que ya están en el HTML
+    document.querySelectorAll('#topCamisetas .camiseta').forEach(function (c) {
+      const img = c.querySelector('img');
       if (img.complete && img.naturalWidth === 0) {
         sinFoto(img);
       } else {
         img.addEventListener('error', function () { sinFoto(img); }, { once: true });
       }
+      anadirBoton(c, c.querySelector('p').textContent);
     });
 
-    searchBox.addEventListener('input', buscarCamisetas);
+    function buscar() {
+      const filtro = normalizar(searchBox.value.trim());
+
+      if (filtro === '') {
+        inicio.forEach(function (s) { s.hidden = false; });
+        resultados.hidden = true;
+        return;
+      }
+
+      inicio.forEach(function (s) { s.hidden = true; });
+      resultados.hidden = false;
+      listaResultados.replaceChildren();
+
+      if (!datos) {
+        sinResultados.textContent = 'No se pudo cargar el catálogo. Recarga la página e inténtalo de nuevo.';
+        sinResultados.hidden = false;
+        return;
+      }
+
+      let total = 0;
+      Object.entries(datos).forEach(function ([idLiga, liga]) {
+        const ligaCoincide = normalizar(liga.nombre).includes(filtro);
+        liga.equipos.forEach(function (equipo) {
+          if (ligaCoincide || normalizar(equipo.nombre).includes(filtro)) {
+            listaResultados.appendChild(crearTarjetaEquipo(idLiga, equipo, liga.nombre));
+            total++;
+          }
+        });
+      });
+
+      sinResultados.textContent = 'No hay equipos que coincidan con tu búsqueda. Prueba con el nombre de otro equipo.';
+      sinResultados.hidden = total > 0;
+    }
+
+    searchBox.addEventListener('input', buscar);
     document.getElementById('busqueda').addEventListener('submit', function (e) {
       e.preventDefault();
-      buscarCamisetas();
+      buscar();
     });
+
+    cargarEquipos().then(function (d) {
+      datos = d;
+      if (searchBox.value.trim() !== '') buscar();
+    }).catch(function () {});
   </script>
 </body>
 </html>
