@@ -62,6 +62,13 @@
       mensaje.hidden = false;
     }
 
+    function sinFoto(img) {
+      const aviso = document.createElement('div');
+      aviso.className = 'sin-foto';
+      aviso.textContent = 'Foto próximamente';
+      img.replaceWith(aviso);
+    }
+
     function crearTarjeta(equipo) {
       const article = document.createElement('article');
       article.className = 'camiseta';
@@ -70,6 +77,7 @@
       contenedor.className = 'camiseta-img';
 
       const img = document.createElement('img');
+      img.addEventListener('error', function () { sinFoto(img); }, { once: true });
       img.src = equipo.imagen;
       img.alt = 'Camiseta ' + equipo.nombre;
       img.loading = 'lazy';
@@ -103,7 +111,7 @@
       const id = new URLSearchParams(window.location.search).get('liga') || 'laliga';
 
       try {
-        const respuesta = await fetch('data/equipos.json');
+        const respuesta = await fetch('equipos.json');
         if (!respuesta.ok) throw new Error('HTTP ' + respuesta.status);
         const datos = await respuesta.json();
         const liga = datos[id];
@@ -136,7 +144,7 @@
         formBusqueda.hidden = false;
       } catch (error) {
         document.getElementById('tituloLiga').textContent = 'No se pudo cargar la liga';
-        mostrarMensaje('No se pudo leer data/equipos.json. Si abres el archivo con doble clic, usa un servidor local (por ejemplo, Live Server en VS Code).');
+        mostrarMensaje('No se pudo leer equipos.json. Si abres el archivo con doble clic, usa un servidor local (por ejemplo, Live Server en VS Code).');
       }
     }
 
