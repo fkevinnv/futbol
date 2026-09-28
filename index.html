@@ -2,79 +2,351 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Catálogo de Camisetas de Fútbol</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Enlace al CSS externo -->
+  <title>Streetwear Store | Catálogo de camisetas de fútbol</title>
+  <meta
+    name="description"
+    content="Explora camisetas de fútbol de La Liga, Premier League, Serie A, Bundesliga y Ligue 1."
+  >
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header>Catálogo de Camisetas de Fútbol</header>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
 
-  <nav>
-    <ul>
-      <li><a href="/ligas/laliga.html">La Liga</a></li>
-      <li><a href="premier.html">Premier League</a></li>
-      <li><a href="seriea.html">Serie A</a></li>
-      <li><a href="bundesliga.html">Bundesliga</a></li>
-      <li><a href="ligue1.html">Ligue 1</a></li>
-      <li><a href="https://www.instagram.com/streetwear.store01/">Redes Sociales</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="brand" href="/" aria-label="Streetwear Store, ir al inicio">
+        Streetwear Store
+      </a>
 
-  <section id="busqueda">
-    <input type="text" id="searchBox" placeholder="Buscar camisetas...">
-    <button id="searchBtn" onclick="buscarCamisetas()">Buscar</button>
-  </section>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span class="sr-only">Abrir menú de navegación</span>
+        ☰
+      </button>
 
-  <section id="topCamisetas">
-    <h2>Camisetas más vendidas</h2>
-    <div class="camisetas-container">
-      <div class="camiseta">
-        <img id="cam1" src="/camisetas/laliga/barcelona/barca.png" alt="Camiseta FC Barcelona">
-        <p>FC Barcelona 25/26</p>
-      </div>
-      <div class="camiseta">
-        <img id="cam2" src="/camisetas/laliga/madrid/rma2324.png" alt="Camiseta Real Madrid">
-        <p>Real Madrid 23/24</p>
-      </div>
-      <div class="camiseta">
-        <img id="cam3" src="/camisetas/premier/city/mancity_2024_3.png" alt="Camiseta Manchester City">
-        <p>Manchester City - 23/24 Visitante</p>
-      </div>
-      <div class="camiseta">
-        <img id="cam4" src="camiseta4.jpg" alt="Camiseta Real Madrid">
-        <p>Vinícius Jr - Real Madrid</p>
-      </div>
+      <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/ligas/laliga.html">La Liga</a></li>
+          <li><a href="/ligas/premier.html">Premier League</a></li>
+          <li><a href="/ligas/seriea.html">Serie A</a></li>
+          <li><a href="/ligas/bundesliga.html">Bundesliga</a></li>
+          <li><a href="/ligas/ligue1.html">Ligue 1</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/streetwear.store01/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+              <span class="sr-only">(se abre en una pestaña nueva)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <footer>© 2025 Catálogo camisetas de fútbol - Streetwear Store</footer>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Nueva temporada</p>
+        <h1 id="hero-title">Camisetas de fútbol para verdaderos aficionados</h1>
+        <p>
+          Descubre equipaciones de tus clubes favoritos y encuentra tu próxima camiseta.
+        </p>
+        <a class="button button-primary" href="#catalogo">
+          Ver camisetas destacadas
+        </a>
+      </div>
+    </section>
+
+    <section id="busqueda" class="search-section" aria-labelledby="search-title">
+      <div class="section-heading">
+        <p class="eyebrow">Encuentra tu equipo</p>
+        <h2 id="search-title">Busca una camiseta</h2>
+      </div>
+
+      <form id="searchForm" class="search-form" role="search">
+        <label for="searchBox">Buscar por club, jugador, liga o temporada</label>
+
+        <div class="search-controls">
+          <input
+            type="search"
+            id="searchBox"
+            name="q"
+            placeholder="Ejemplo: Barcelona, City o Vinícius"
+            autocomplete="off"
+          >
+          <button class="button button-primary" type="submit">Buscar</button>
+        </div>
+      </form>
+
+      <p id="searchStatus" class="search-status" aria-live="polite"></p>
+    </section>
+
+    <section id="catalogo" class="products-section" aria-labelledby="products-title">
+      <div class="section-heading">
+        <p class="eyebrow">Los favoritos de la afición</p>
+        <h2 id="products-title">Camisetas más vendidas</h2>
+      </div>
+
+      <div id="productsGrid" class="camisetas-container">
+        <article
+          class="camiseta"
+          data-name="fc barcelona barça 25 26 local laliga"
+        >
+          <a
+            class="product-link"
+            href="/camisetas/laliga/barcelona/"
+            aria-label="Ver camiseta FC Barcelona 25/26"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="/camisetas/laliga/barcelona/barca.png"
+                alt="Camiseta local del FC Barcelona temporada 2025/26"
+                width="600"
+                height="600"
+                loading="eager"
+              >
+              <span class="badge">Más vendida</span>
+            </div>
+
+            <div class="product-info">
+              <p class="product-league">La Liga</p>
+              <h3>FC Barcelona 25/26</h3>
+              <p class="product-price">Consultar precio</p>
+            </div>
+          </a>
+
+          <a
+            class="product-action"
+            href="https://wa.me/XXXXXXXXXXX?text=Hola,%20me%20interesa%20la%20camiseta%20del%20FC%20Barcelona%2025%2F26."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar disponibilidad
+          </a>
+        </article>
+
+        <article
+          class="camiseta"
+          data-name="real madrid rma 23 24 local laliga"
+        >
+          <a
+            class="product-link"
+            href="/camisetas/laliga/madrid/"
+            aria-label="Ver camiseta Real Madrid 23/24"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="/camisetas/laliga/madrid/rma2324.png"
+                alt="Camiseta local del Real Madrid temporada 2023/24"
+                width="600"
+                height="600"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+              <p class="product-league">La Liga</p>
+              <h3>Real Madrid 23/24</h3>
+              <p class="product-price">Consultar precio</p>
+            </div>
+          </a>
+
+          <a
+            class="product-action"
+            href="https://wa.me/XXXXXXXXXXX?text=Hola,%20me%20interesa%20la%20camiseta%20del%20Real%20Madrid%2023%2F24."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar disponibilidad
+          </a>
+        </article>
+
+        <article
+          class="camiseta"
+          data-name="manchester city man city 23 24 visitante premier league"
+        >
+          <a
+            class="product-link"
+            href="/camisetas/premier/city/"
+            aria-label="Ver camiseta visitante Manchester City 23/24"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="/camisetas/premier/city/mancity_2024_3.png"
+                alt="Camiseta visitante del Manchester City temporada 2023/24"
+                width="600"
+                height="600"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+              <p class="product-league">Premier League</p>
+              <h3>Manchester City 23/24 visitante</h3>
+              <p class="product-price">Consultar precio</p>
+            </div>
+          </a>
+
+          <a
+            class="product-action"
+            href="https://wa.me/XXXXXXXXXXX?text=Hola,%20me%20interesa%20la%20camiseta%20visitante%20del%20Manchester%20City%2023%2F24."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar disponibilidad
+          </a>
+        </article>
+
+        <article
+          class="camiseta"
+          data-name="vinícius vinicius junior real madrid laliga"
+        >
+          <a
+            class="product-link"
+            href="/camisetas/laliga/madrid/vinicius-jr.html"
+            aria-label="Ver camiseta Vinícius Jr del Real Madrid"
+          >
+            <div class="product-image-wrapper">
+              <img
+                src="/camisetas/laliga/madrid/viniciusr.png"
+                alt="Camiseta del Real Madrid personalizada con Vinícius Jr"
+                width="600"
+                height="600"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+              <p class="product-league">La Liga</p>
+              <h3>Vinícius Jr. — Real Madrid</h3>
+              <p class="product-price">Consultar precio</p>
+            </div>
+          </a>
+
+          <a
+            class="product-action"
+            href="https://wa.me/XXXXXXXXXXX?text=Hola,%20me%20interesa%20la%20camiseta%20de%20Vinícius%20Jr.%20del%20Real%20Madrid."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar disponibilidad
+          </a>
+        </article>
+      </div>
+
+      <p id="noResults" class="no-results" hidden>
+        No encontramos camisetas con esa búsqueda. Prueba con otro equipo, jugador o liga.
+      </p>
+    </section>
+
+    <section class="benefits" aria-label="Ventajas de comprar en Streetwear Store">
+      <div class="benefit">
+        <span aria-hidden="true">⚽</span>
+        <h2>Catálogo actualizado</h2>
+        <p>Nuevas camisetas y temporadas disponibles regularmente.</p>
+      </div>
+
+      <div class="benefit">
+        <span aria-hidden="true">📦</span>
+        <h2>Consulta tu talla</h2>
+        <p>Te ayudamos a elegir la talla antes de realizar tu pedido.</p>
+      </div>
+
+      <div class="benefit">
+        <span aria-hidden="true">💬</span>
+        <h2>Atención directa</h2>
+        <p>Escríbenos por Instagram o WhatsApp para consultar disponibilidad.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="currentYear"></span> Streetwear Store. Todos los derechos reservados.</p>
+
+    <div class="footer-links">
+      <a href="/politica-envios.html">Envíos</a>
+      <a href="/cambios-devoluciones.html">Cambios y devoluciones</a>
+      <a
+        href="https://www.instagram.com/streetwear.store01/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+    </div>
+  </footer>
 
   <script>
-    function buscarCamisetas() {
-      let filtro = document.getElementById('searchBox').value.toLowerCase();
-      let camisetas = document.querySelectorAll('.camiseta');
+    const searchForm = document.getElementById("searchForm");
+    const searchBox = document.getElementById("searchBox");
+    const products = [...document.querySelectorAll(".camiseta")];
+    const noResults = document.getElementById("noResults");
+    const searchStatus = document.getElementById("searchStatus");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.getElementById("main-navigation");
 
-      camisetas.forEach(function(c) {
-        let nombre = c.querySelector('p').innerText.toLowerCase();
-        if (nombre.includes(filtro)) {
-          c.style.display = 'inline-block';
-        } else {
-          c.style.display = 'none';
-        }
-      });
+    function normalizarTexto(texto) {
+      return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
     }
 
-    document.querySelectorAll('.camiseta img').forEach(function(img) {
-      img.addEventListener('mouseover', function() {
-        img.style.filter = 'drop-shadow(0 0 20px #00e6e6)';
+    function filtrarCamisetas() {
+      const filtro = normalizarTexto(searchBox.value);
+      let visibles = 0;
+
+      products.forEach((producto) => {
+        const nombre = normalizarTexto(producto.dataset.name);
+        const coincide = nombre.includes(filtro);
+
+        producto.hidden = !coincide;
+
+        if (coincide) {
+          visibles += 1;
+        }
       });
-      img.addEventListener('mouseout', function() {
-        img.style.filter = 'none';
-      });
+
+      noResults.hidden = visibles !== 0;
+
+      if (!filtro) {
+        searchStatus.textContent = "";
+      } else {
+        searchStatus.textContent =
+          visibles === 1
+            ? "Se ha encontrado 1 camiseta."
+            : `Se han encontrado ${visibles} camisetas.`;
+      }
+    }
+
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      filtrarCamisetas();
     });
+
+    searchBox.addEventListener("input", filtrarCamisetas);
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      mainNav.classList.toggle("is-open");
+    });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
