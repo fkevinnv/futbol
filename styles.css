@@ -353,3 +353,11 @@ nav a[aria-current="page"] {
 #busqueda[hidden] {
   display: none;
 }
+
+/* Marcador cuando falta la foto de una camiseta */
+.sin-foto {
+  padding: 1rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  text-align: center;
+}
