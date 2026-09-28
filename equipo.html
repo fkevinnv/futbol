@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipo - Tienda de Camisetas</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Streetwear Store</a>
+
+      <nav aria-label="Ligas">
+        <ul>
+          <li><a href="liga.html?liga=laliga">La Liga</a></li>
+          <li><a href="liga.html?liga=premier">Premier League</a></li>
+          <li><a href="liga.html?liga=seriea">Serie A</a></li>
+          <li><a href="liga.html?liga=bundesliga">Bundesliga</a></li>
+          <li><a href="liga.html?liga=ligue1">Ligue 1</a></li>
+          <li><a href="https://www.instagram.com/streetwear.store01/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <a class="volver" id="volverLiga" href="index.html">Volver al catálogo</a>
+      <h1 id="tituloEquipo">Cargando...</h1>
+      <p id="subtituloEquipo"></p>
+    </section>
+
+    <section id="listado" class="camisetas-container"></section>
+    <p id="mensaje" class="sin-resultados" hidden></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Catálogo camisetas de fútbol - Streetwear Store</p>
+  </footer>
+
+  <script src="catalogo.js"></script>
+  <script>
+    const listado = document.getElementById('listado');
+    const mensaje = document.getElementById('mensaje');
+
+    function mostrarMensaje(texto) {
+      mensaje.textContent = texto;
+      mensaje.hidden = false;
+    }
+
+    async function cargarEquipo() {
+      const params = new URLSearchParams(window.location.search);
+      const idLiga = params.get('liga');
+      const idEquipo = params.get('equipo');
+
+      try {
+        const datos = await cargarEquipos();
+        const liga = datos[idLiga];
+        const equipo = liga && liga.equipos.find(function (e) { return e.id === idEquipo; });
+
+        if (!equipo) {
+          document.getElementById('tituloEquipo').textContent = 'Equipo no encontrado';
+          mostrarMensaje('Elige un equipo desde el listado de su liga.');
+          return;
+        }
+
+        document.title = equipo.nombre + ' - Tienda de Camisetas';
+        document.getElementById('tituloEquipo').textContent = equipo.nombre;
+        document.getElementById('subtituloEquipo').textContent = 'Equipaciones disponibles';
+
+        const volver = document.getElementById('volverLiga');
+        volver.href = 'liga.html?liga=' + encodeURIComponent(idLiga);
+        volver.textContent = 'Volver a ' + liga.nombre;
+
+        document.querySelectorAll('nav a').forEach(function (a) {
+          if (a.getAttribute('href') === 'liga.html?liga=' + idLiga) {
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        equipo.equipaciones.forEach(function (eq) {
+          const camiseta = { nombre: eq.tipo, imagen: eq.imagen, precio: eq.precio };
+          const completo = equipo.nombre + ' ' + eq.tipo + ' ' + eq.temporada;
+          listado.appendChild(crearTarjeta(camiseta, 'Temporada ' + eq.temporada, completo));
+        });
+      } catch (error) {
+        document.getElementById('tituloEquipo').textContent = 'No se pudo cargar el equipo';
+        mostrarMensaje('No se pudo leer equipos.json. Si abres el archivo con doble clic, usa un servidor local (por ejemplo, Live Server en VS Code).');
+      }
+    }
+
+    cargarEquipo();
+  </script>
+</body>
+</html>
