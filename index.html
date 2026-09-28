@@ -2,84 +2,113 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Catálogo de Camisetas de Fútbol</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Enlace al CSS externo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header>Catálogo de Camisetas de Fútbol</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Streetwear Store</a>
 
-  <nav>
-    <ul>
-      <li><a href="/ligas/laliga.html">La Liga</a></li>
-      <li><a href="premier.html">Premier League</a></li>
-      <li><a href="seriea.html">Serie A</a></li>
-      <li><a href="bundesliga.html">Bundesliga</a></li>
-      <li><a href="ligue1.html">Ligue 1</a></li>
-      <li><a href="https://www.instagram.com/streetwear.store01/">Redes Sociales</a></li>
-    </ul>
-  </nav>
-
-  <section id="busqueda">
-    <input type="text" id="searchBox" placeholder="Buscar camisetas...">
-    <button id="searchBtn" onclick="buscarCamisetas()">Buscar</button>
-  </section>
-
-  <section id="topCamisetas">
-    <h2>Camisetas más vendidas</h2>
-
-    <div class="camisetas-container">
-      <div class="camiseta">
-        <img id="cam1" src="/camisetas/laliga/barcelona/barca.png" alt="Camiseta FC Barcelona">
-        <p>FC Barcelona 25/26</p>
-      </div>
-
-      <div class="camiseta">
-        <img id="cam2" src="/camisetas/laliga/madrid/rma2324.png" alt="Camiseta Real Madrid">
-        <p>Real Madrid 23/24</p>
-      </div>
-
-      <div class="camiseta">
-        <img id="cam3" src="/camisetas/premier/city/mancity_2024_3.png" alt="Camiseta Manchester City">
-        <p>Manchester City - 23/24 Visitante</p>
-      </div>
-
-      <div class="camiseta">
-        <img id="cam4" src="camiseta4.jpg" alt="Camiseta Real Madrid">
-        <p>Vinícius Jr - Real Madrid</p>
-      </div>
+      <nav aria-label="Ligas">
+        <ul>
+          <li><a href="/ligas/laliga.html">La Liga</a></li>
+          <li><a href="premier.html">Premier League</a></li>
+          <li><a href="seriea.html">Serie A</a></li>
+          <li><a href="bundesliga.html">Bundesliga</a></li>
+          <li><a href="ligue1.html">Ligue 1</a></li>
+          <li><a href="https://www.instagram.com/streetwear.store01/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <footer>© 2025 Catálogo camisetas de fútbol - Streetwear Store</footer>
+  <main>
+    <section class="intro">
+      <h1>Catálogo de Camisetas de Fútbol</h1>
+      <p>Camisetas de las principales ligas europeas. Busca por equipo, temporada o jugador.</p>
+
+      <form id="busqueda" role="search">
+        <label for="searchBox" class="visually-hidden">Buscar camisetas</label>
+        <input type="search" id="searchBox" placeholder="Buscar camisetas..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section id="topCamisetas">
+      <h2>Camisetas más vendidas</h2>
+
+      <div class="camisetas-container">
+        <article class="camiseta">
+          <div class="camiseta-img">
+            <img src="/camisetas/laliga/barcelona/barca.png" alt="Camiseta FC Barcelona" loading="lazy">
+          </div>
+          <p>FC Barcelona 25/26</p>
+        </article>
+
+        <article class="camiseta">
+          <div class="camiseta-img">
+            <img src="/camisetas/laliga/madrid/rma2324.png" alt="Camiseta Real Madrid" loading="lazy">
+          </div>
+          <p>Real Madrid 23/24</p>
+        </article>
+
+        <article class="camiseta">
+          <div class="camiseta-img">
+            <img src="/camisetas/premier/city/mancity_2024_3.png" alt="Camiseta Manchester City" loading="lazy">
+          </div>
+          <p>Manchester City - 23/24 Visitante</p>
+        </article>
+
+        <article class="camiseta">
+          <div class="camiseta-img">
+            <img src="camiseta4.jpg" alt="Camiseta Real Madrid de Vinícius Jr" loading="lazy">
+          </div>
+          <p>Vinícius Jr - Real Madrid</p>
+        </article>
+      </div>
+
+      <p id="sinResultados" class="sin-resultados" hidden>
+        No hay camisetas que coincidan con tu búsqueda. Prueba con el nombre de otro equipo.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Catálogo camisetas de fútbol - Streetwear Store</p>
+  </footer>
 
   <script>
+    const searchBox = document.getElementById('searchBox');
+    const camisetas = document.querySelectorAll('.camiseta');
+    const sinResultados = document.getElementById('sinResultados');
+
     function buscarCamisetas() {
-      let filtro = document.getElementById('searchBox').value.toLowerCase();
-      let camisetas = document.querySelectorAll('.camiseta');
+      const filtro = searchBox.value.trim().toLowerCase();
+      let visibles = 0;
 
-      camisetas.forEach(function(c) {
-        let nombre = c.querySelector('p').innerText.toLowerCase();
-
-        if (nombre.includes(filtro)) {
-          c.style.display = 'inline-block';
-        } else {
-          c.style.display = 'none';
-        }
+      camisetas.forEach(function (c) {
+        const nombre = c.querySelector('p').textContent.toLowerCase();
+        const coincide = nombre.includes(filtro);
+        c.hidden = !coincide;
+        if (coincide) visibles++;
       });
+
+      sinResultados.hidden = visibles > 0;
     }
 
-    document.querySelectorAll('.camiseta img').forEach(function(img) {
-      img.addEventListener('mouseover', function() {
-        img.style.filter = 'drop-shadow(0 0 20px #00e6e6)';
-      });
-
-      img.addEventListener('mouseout', function() {
-        img.style.filter = 'none';
-      });
+    searchBox.addEventListener('input', buscarCamisetas);
+    document.getElementById('busqueda').addEventListener('submit', function (e) {
+      e.preventDefault();
+      buscarCamisetas();
     });
   </script>
 </body>
