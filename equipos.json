@@ -36,7 +36,7 @@
       {
         "id": "barcelona",
         "nombre": "FC Barcelona",
-        "escudo": "ligas/escudos/laliga/barca_escudo.png",
+        "escudo": "escudos/laliga/barca.jpg",
         "equipaciones": [
           {"tipo": "Local", "temporada": "2025/26", "imagen": "camisetas/laliga/barcelona/barca.png"},
           {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/barcelona/barcelona_visitante.png"},
