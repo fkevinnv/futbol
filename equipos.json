@@ -196,7 +196,7 @@
       {
         "id": "villarreal",
         "nombre": "Villarreal CF",
-        "escudo": "escudos/laliga/villarreal.png",
+        "escudo": "escudos/laliga/villareal.png",
         "equipaciones": [
           {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/villarreal/villarreal_local.png"},
           {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/villarreal/villarreal_visitante.png"},
