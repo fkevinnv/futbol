@@ -16,7 +16,7 @@
       {
         "id": "ath",
         "nombre": "Athletic Club",
-        "escudo": "escudos/laliga/ath.png",
+        "escudo": "escudos/laliga/athetic.png",
         "equipaciones": [
           {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_local.png"},
           {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_visitante.png"},
@@ -46,7 +46,7 @@
       {
         "id": "realbetis",
         "nombre": "Real Betis",
-        "escudo": "escudos/laliga/realbetis.png",
+        "escudo": "escudos/laliga/betis.png",
         "equipaciones": [
           {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/realbetis/realbetis_local.png"},
           {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/realbetis/realbetis_visitante.png"},
