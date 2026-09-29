@@ -16,7 +16,7 @@
       {
         "id": "ath",
         "nombre": "Athletic Club",
-        "escudo": "escudos/laliga/athetic.png",
+        "escudo": "escudos/laliga/athetic.jpg",
         "equipaciones": [
           {"tipo": "Local", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_local.png"},
           {"tipo": "Visitante", "temporada": "2026/27", "imagen": "camisetas/laliga/ath/ath_visitante.png"},
